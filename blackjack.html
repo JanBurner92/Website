@@ -1,0 +1,76 @@
+<html>
+<head>
+<style type="text/css" >
+body { background: green;
+}
+.karten { border: 3px;
+}
+</style>
+<script type="text/javascript" >
+
+var kartenfeld = 0;
+
+function getRandom(min, max) {
+ if(min > max) {
+  return -1;
+ }
+ if(min == max) {
+  return min;
+ }
+ var r;
+ do {
+  r = Math.random();
+ }
+ while(r == 1.0); 
+ return min + parseInt(r * (max-min+1));
+}
+
+
+function auswhal(feld){
+
+	var nummer = getRandom(0,2);
+
+	
+	var bild = new Image();
+
+	bild.src = "bild"+nummer+".jpg";
+	if (kartenfeld == 0){
+	document.all.bildfeld1.src = bild.src;
+	kartenfeld = kartenfeld + 1;
+}
+	if (kartenfeld == 1){
+	document.all.bildfeld2.src = bild.src;
+	kartenfeld = kartenfeld + 1;
+}
+	if (kartenfeld == 2){
+	document.all.bildfeld3.src = bild.src;
+	kartenfeld = kartenfeld + 1;
+
+}
+	if (kartenfeld == 3){
+	document.all.bildfeld4.src = bild.src;
+	kartenfeld = kartenfeld + 1;
+
+}
+	if (kartenfeld == 4){
+	document.all.bildfeld5.src = bild.src;
+        kartenfeld = kartenfeld + 1;
+
+}
+
+}
+
+</script>
+
+</head>
+<body>
+<img src="green.jpg" class="karten" name="bildfeld1" height="200" widht="100" > 
+<img src="green.jpg" class="karten"  name="bildfeld2" height="200" widht="100" > 
+<img src="green.jpg" class="karten"  name="bildfeld3" height="200" widht="100"  > 
+<img src="green.jpg" class="karten"  name="bildfeld" height="200" widht="100" >
+<img src="green.jpg" class="karten"  name="bildfeld5" height="200" widht="100"  >  
+<br> 
+<input type="button" value="Gib mir ne Karte..." onClick="auswhal()" >
+</body>
+</html>
+
