@@ -1,23 +1,28 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			console.log("Getting the wrapper");
-		
-			var wrapper = $("#wrapper");
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">
+                $(document).ready(function () {
 
-			wrapper.css({color: "red"});
+                        // the main content wrapper
+                        var wrapper = $("#wrapper");
 
-			console.log("wrapper = ", wrapper);
-		});
-	</script>
+                        var heading = $("#heading");
+
+                        heading.css({color: "red"});
+                        heading.fadeTo('slow', 0.3, function() {
+                                console.log("Animation finished")
+                                heading.css({color: "black"});
+                        });
+
+                });
+        </script>
 </head>
 <body>
 
 <div id="wrapper">
-Hallo Welt
+        <h1 id="heading">Hallo Welt</h1>
 </div>
 
 </body>
