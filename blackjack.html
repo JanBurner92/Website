@@ -28,7 +28,7 @@ function getRandom(min, max) {
 
 function auswhal(feld){
 
-	var nummer = getRandom(0,2);
+	var nummer = getRandom(0,1);
 
 	
 	var bild = new Image();
@@ -38,21 +38,21 @@ function auswhal(feld){
 	document.all.bildfeld1.src = bild.src;
 	kartenfeld = kartenfeld + 1;
 }
-	if (kartenfeld == 1){
+      else if (kartenfeld == 1){
 	document.all.bildfeld2.src = bild.src;
 	kartenfeld = kartenfeld + 1;
 }
-	if (kartenfeld == 2){
+     else if (kartenfeld == 2){
 	document.all.bildfeld3.src = bild.src;
 	kartenfeld = kartenfeld + 1;
 
 }
-	if (kartenfeld == 3){
+    else if (kartenfeld == 3){
 	document.all.bildfeld4.src = bild.src;
 	kartenfeld = kartenfeld + 1;
 
 }
-	if (kartenfeld == 4){
+	else{
 	document.all.bildfeld5.src = bild.src;
         kartenfeld = kartenfeld + 1;
 
